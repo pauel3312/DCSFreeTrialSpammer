@@ -24,6 +24,7 @@ TRIAL_OTP_VERIFY_NAME = "Otp"
 usr = get_user()
 
 shop_address = "https://www.digitalcombatsimulator.com/en/shop/modules/"
+terrains_address = "https://www.digitalcombatsimulator.com/en/shop/terrains/"
 page_argument = "?PAGEN_1="
 
 options = Options()
@@ -88,9 +89,9 @@ def resolve_trial_button(trial_button: WebElement, user: str) -> None:
     resolve_OTP(user)
 
 
-def resolve_all_trials_on_page(user: str, page_number: int) -> None:
+def resolve_all_trials_on_page(user: str, page_number: int, address: str) -> None:
     while 1:
-        driver.get(str(shop_address+page_argument+str(page_number)))
+        driver.get(str(address+page_argument+str(page_number)))
         time.sleep(DEFAULT_WAIT)
         try:
             button = get_trial_button()
@@ -105,7 +106,9 @@ def resolve_all_trials_on_page(user: str, page_number: int) -> None:
 
 def resolve_all_trials(user: str) -> None:
     for i in range(1, 7):
-        resolve_all_trials_on_page(user, i)
+        resolve_all_trials_on_page(user, i, shop_address)
+    for i in (1, 2):
+        resolve_all_trials_on_page(user, i, terrains_address)
 
 
 if __name__ == "__main__":
