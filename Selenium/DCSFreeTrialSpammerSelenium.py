@@ -21,7 +21,7 @@ SHOP_TRIAL_OK_TEXT = "Trial period"
 TRIAL_OTP_ID = "OTP"
 TRIAL_OTP_VERIFY_NAME = "Otp"
 
-usr = "pauel99482197"
+usr = get_user()
 
 shop_address = "https://www.digitalcombatsimulator.com/en/shop/modules/"
 page_argument = "?PAGEN_1="
