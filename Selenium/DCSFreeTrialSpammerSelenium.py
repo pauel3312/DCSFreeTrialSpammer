@@ -68,7 +68,7 @@ def resolve_OTP_login(user: str) -> None:
 
 def resolve_OTP(user: str) -> None:
     otp_textbox = WebDriverWait(driver, 10).until(e_c.visibility_of_element_located((By.ID, TRIAL_OTP_ID)))
-    # time.sleep(30)
+    time.sleep(DEFAULT_WAIT*5)
     otp_textbox.send_keys(get_OTP(user))
     driver.find_element(By.NAME, TRIAL_OTP_VERIFY_NAME).click()
 
