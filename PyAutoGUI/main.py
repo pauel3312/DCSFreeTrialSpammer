@@ -9,9 +9,9 @@ import time
 
 SCROLL_LENGTH = 950
 
-users = "logins.txt"
-passwords_JSON = "UserPasswords.json"
-OTP_secrets_JSON = "UserOTPSecrets.json"
+users = "../logins.txt"
+passwords_JSON = "../UserPasswords.json"
+OTP_secrets_JSON = "../UserOTPSecrets.json"
 
 trials_address = "https://www.digitalcombatsimulator.com/en/personal/licensing/trial/"
 shop_address = "https://www.digitalcombatsimulator.com/en/shop/modules/"
