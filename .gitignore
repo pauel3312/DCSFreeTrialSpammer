@@ -1,4 +1,4 @@
 /.idea
-/logins.txt
-/UserOTPSecrets.json
-/UserPasswords.json
+/PyAutoGUI/logins.txt
+/PyAutoGUI/UserOTPSecrets.json
+/PyAutoGUI/UserPasswords.json
