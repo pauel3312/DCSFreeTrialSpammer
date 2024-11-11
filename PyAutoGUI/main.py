@@ -1,11 +1,9 @@
 from typing import Optional
-
 import pyautogui
 import pyautogui as agui
 import pyperclip
-import pyotp
 import time
-from load_secrets import passwords_dict, OTP_Dict, get_user
+from load_secrets import passwords_dict, get_user, get_OTP
 
 SCROLL_LENGTH = 950
 
@@ -44,11 +42,6 @@ def move_to_address(address: str) -> None:
     agui.hotkey("Backspace")
     agui.hotkey("ctrl", "v")
     agui.hotkey("Enter")
-
-
-def get_OTP(user: str) -> str:
-    totp = pyotp.TOTP(OTP_Dict[user])
-    return totp.now()
 
 
 def take_trial(user: str) -> None:

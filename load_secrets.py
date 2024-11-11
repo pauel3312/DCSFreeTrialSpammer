@@ -1,8 +1,9 @@
 import json
+import pyotp
 
-users = "./logins.txt"
-passwords_JSON = "./UserPasswords.json"
-OTP_secrets_JSON = "./UserOTPSecrets.json"
+users = "../logins.txt"
+passwords_JSON = "../UserPasswords.json"
+OTP_secrets_JSON = "../UserOTPSecrets.json"
 
 file = open(passwords_JSON, "r")
 passwords_dict: dict[str: str] = json.loads(file.read())
@@ -23,3 +24,8 @@ def get_user() -> str:
     file_tmp.writelines(users_list)
     file_tmp.close()
     return users_list[index+1]
+
+
+def get_OTP(user: str) -> str:
+    totp = pyotp.TOTP(OTP_Dict[user])
+    return totp.now()
