@@ -13,5 +13,7 @@ in logins.txt:
 ...
 ```
 
-user_passwords.json contains a single JSON-formatted dictionary, keys are usernames as defined in logins.txt, values are the passwords to the corresponding DCS accounts
+UserPasswords.json contains a single JSON-formatted dictionary, keys are usernames as defined in logins.txt, values are the passwords to the corresponding DCS accounts
+
+UserOTPSecrets.json contains a single JSON-formatted dictionary, keys are usernames as defined in logins.txt, values are the time-based one time password secrets to the corresponding DCS accounts.
 
