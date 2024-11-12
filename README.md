@@ -12,3 +12,6 @@ in logins.txt:
 <username2>
 ...
 ```
+
+user_passwords.json contains a single JSON-formatted dictionary, keys are usernames as defined in logins.txt, values are the passwords to the corresponding DCS accounts
+
