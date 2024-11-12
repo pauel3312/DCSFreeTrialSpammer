@@ -17,3 +17,6 @@ UserPasswords.json contains a single JSON-formatted dictionary, keys are usernam
 
 UserOTPSecrets.json contains a single JSON-formatted dictionary, keys are usernames as defined in logins.txt, values are the time-based one time password secrets to the corresponding DCS accounts.
 
+All of these files should be placed in project root.
+the scripts should be launched from their respective directories.
+
