@@ -23,7 +23,7 @@ def get_user() -> str:
     file_tmp = open(users, "w")
     file_tmp.writelines(users_list)
     file_tmp.close()
-    return users_list[index+1]
+    return users_list[index+1].strip()
 
 
 def get_OTP(user: str) -> str:
